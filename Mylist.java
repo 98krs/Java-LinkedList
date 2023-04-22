@@ -44,6 +44,14 @@ public class Mylist < T > {
 	   current.nextNode = lastNode = new ListNode < T > (insertItem);
       }
    }
+   
+   //remove node from head
+   public void removeFromHead() {
+      
+   }
+   
+   //remove node from tail
+   //insert stuff
 
    //determine whether list is empty
    public boolean isEmpty () {
