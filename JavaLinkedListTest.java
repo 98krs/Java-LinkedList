@@ -28,5 +28,9 @@ public class JavaLinkedListTest {
       //PRINT OUT THE LIST
       list.print();
       
+      //Requirement 5
+      list.searchByIndex(3);
+      list.searchByIndex(10);
+      
    }
 }

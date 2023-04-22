@@ -59,8 +59,24 @@ public class Mylist < T > {
          current = current.nextNode;
       }
       lastNode = current; //change pointer to 2nd to last
-      //line 2 - remove last value (done by orphaning the node) 
-      current.nextNode = null;
+      current.nextNode = null; //remove last value (done by orphaning the node) 
+   }
+   
+   // 5) search for an item by index number (the number of its position in the list) and display the information for that library item.  
+   //The code must validate that the index number is within bounds and throw an appropriate exception if not. 
+   public void searchByIndex(int index) {
+   /*
+      ListNode <T> current = firstNode;
+      try {
+         for (int i = 1; i <= index; i += 1) {
+            current = current.nextNode;
+         }
+         System.out.println("Index: " + index + " = " + current.data);
+      }
+      catch (NoSuchMethodError ex) {
+         System.out.println("The index number is not within bounds.");
+      }
+   */
    }
 
    //determine whether list is empty
