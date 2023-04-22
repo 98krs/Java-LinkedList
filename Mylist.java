@@ -1,4 +1,4 @@
-//Original code for Linked List Structure Assignment 
+//Original code for Linked List Structure Assignment - provided by professor
 
 import java.util.NoSuchElementException;
 
