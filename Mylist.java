@@ -45,13 +45,23 @@ public class Mylist < T > {
       }
    }
    
-   //remove node from head
+   //remove node from head - we want to change the pointer from the head to the 2nd node
    public void removeFromHead() {
-      
+      ListNode < T > current = firstNode;
+      firstNode = current.nextNode;
    }
    
-   //remove node from tail
-   //insert stuff
+   //remove node from tail - tail is called lastNode
+   public void removeFromTail() {
+      //change pointer to point at 2nd to last node
+      ListNode <T> current = firstNode;
+      while (current.nextNode.nextNode != null) {
+         current = current.nextNode;
+      }
+      lastNode = current; //change pointer to 2nd to last
+      //line 2 - remove last value (done by orphaning the node) 
+      current.nextNode = null;
+   }
 
    //determine whether list is empty
    public boolean isEmpty () {
