@@ -64,17 +64,19 @@ public class Mylist < T > {
    
    // 5) search for an item by index number (the number of its position in the list) and display the information for that library item.  
    //The code must validate that the index number is within bounds and throw an appropriate exception if not. 
-   public void searchByIndex(int index) {
+   public Object searchByIndex(int index) {
    
       ListNode <T> current = firstNode;
       try {
          for (int i = 1; i <= index; i += 1) {
             current = current.nextNode;
          }
-         System.out.println("Index " + index + " = " + current.data);
+         //System.out.println("Index " + index + " = " + current.data);
+         return current.data; 
       }
       catch (java.lang.NullPointerException ex) {
-         System.out.println("The index number is not within bounds.");
+         //System.out.println("The index number is not within bounds.");
+         return null; 
       }
    }
 
@@ -86,15 +88,16 @@ public class Mylist < T > {
    //output list contents
    public void print () {
       if (isEmpty ()) {
-	   System.out.printf ("Empty %s\n", name);
+	   System.out.printf ("Empty %s\n", name); 
+      
 	   return;
       }
-      System.out.printf ("%s is: ", name);
+      System.out.printf ("%s is: ", name); 
       ListNode < T > current = firstNode;
 
       //while not at end of list, output current node's data
       while (current != null) {
-	   System.out.printf ("%s ", current.data);
+	   System.out.printf ("%s ", current.data.toString()); 
 	   current = current.nextNode;
       }
       System.out.println ();
