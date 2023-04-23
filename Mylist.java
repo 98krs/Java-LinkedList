@@ -65,18 +65,17 @@ public class Mylist < T > {
    // 5) search for an item by index number (the number of its position in the list) and display the information for that library item.  
    //The code must validate that the index number is within bounds and throw an appropriate exception if not. 
    public void searchByIndex(int index) {
-   /*
+   
       ListNode <T> current = firstNode;
       try {
          for (int i = 1; i <= index; i += 1) {
             current = current.nextNode;
          }
-         System.out.println("Index: " + index + " = " + current.data);
+         System.out.println("Index " + index + " = " + current.data);
       }
-      catch (NoSuchMethodError ex) {
+      catch (java.lang.NullPointerException ex) {
          System.out.println("The index number is not within bounds.");
       }
-   */
    }
 
    //determine whether list is empty
@@ -137,4 +136,5 @@ class ListNode<T> {
 	   ListNode<T> getNext() {
 	      return nextNode;// get next node
 	   }
-   }
+   } 
+
