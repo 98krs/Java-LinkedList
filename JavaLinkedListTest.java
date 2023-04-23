@@ -26,41 +26,50 @@ public class JavaLinkedListTest {
       quizlist.insertAtBack(new Quiz(16, "1950s"));
       
       //CALL THE METHOD TO REMOVE THE TAIL NODE - Requirement 3
-      hwlist.removeFromTail();
-      //PRINT OUT THE LIST
+      System.out.print("Before removing the item from the end, the homework list looks like: ");
       hwlist.print();
+      hwlist.removeFromTail();
+      System.out.print("After removing the item from the end, the homework list looks like: ");
+      hwlist.print(); //print the homework list
       
       //CALL THE METHOD TO REMOVE THE HEAD NODE - Requirement 4
-      hwlist.removeFromHead();
-      //PRINT OUT THE LIST
+      System.out.print("Before removing the item from the front, the homework list looks like: ");
       hwlist.print();
+      hwlist.removeFromHead();
+      System.out.print("After removing the item from the front, the homework list looks like: ");
+      hwlist.print(); //print the homework list
       
       //Requirement 5 
-      System.out.println(((Homework)hwlist.searchByIndex(1)).getPage());
-      hwlist.searchByIndex(3);
-      hwlist.searchByIndex(10);      
+      System.out.println(((Homework)hwlist.searchByIndex(1)).getPage()); //prints out page number but not questions
+      System.out.println(((Homework)hwlist.searchByIndex(2)).getPage()); //prints out page number but not questions
+      System.out.println(((Homework)hwlist.searchByIndex(3)).getPage()); //prints out page number but not questions
+      //hwlist.searchByIndex(3); pretty sure this code is now wrong
+      //hwlist.searchByIndex(10); pretty sure this code is now wrong 
       
       //start of quiz--------------------------------------------------------------------------------- 
            
       //CALL THE METHOD TO REMOVE THE TAIL NODE - Requirement 3
-      quizlist.removeFromTail();
-      //PRINT OUT THE LIST
+      System.out.print("Before removing the item from the end, the quiz list looks like: ");
       quizlist.print();
+      quizlist.removeFromTail();
+      System.out.print("After removing the item from the end, the quiz list looks like: ");
+      quizlist.print(); //print the quiz list
       
       //CALL THE METHOD TO REMOVE THE HEAD NODE - Requirement 4
-      //(remember that you must override the ToString in each subclass in order for this print method to display the contents as a string)
+      System.out.print("Before removing the item from the front, the quiz list looks like: ");
+      quizlist.print();
       quizlist.removeFromHead();
-      //PRINT OUT THE LIST
+      System.out.print("After removing the item from the front, the quiz list looks like: ");
       quizlist.print();
       
-      //Requirement 5 
-      //(remember that you must override the ToString in each subclass in order for this print method to display the contents as a string)
-      quizlist.searchByIndex(0);
-      quizlist.searchByIndex(3);
-      quizlist.searchByIndex(10);
-      
-      
-      
+      //Requirement 5       
+      System.out.println(((Quiz)quizlist.searchByIndex(1)).getChapter()); 
+      System.out.println(((Quiz)quizlist.searchByIndex(2)).getChapter()); 
+      System.out.println(((Quiz)quizlist.searchByIndex(3)).getChapter()); 
+      //quizlist.searchByIndex(1); pretty sure this code is now wrong 
+      //quizlist.searchByIndex(3); //pretty sture this code is now wrong
+      //quizlist.searchByIndex(10);  pretty sure this code is now wrong
+
       /*Requirement 6 - print all items in the library 
       (you may use the print method provided if you 
       appropriately override the toString to ensure 
@@ -72,16 +81,8 @@ public class JavaLinkedListTest {
       display the contents as a string
       */
       //Work on this 
-      quizlist.print();
-      
-      
-      
-      //-----------------------------------------------------------
-      //Starting Kailan's disaster of a program
-      //Create 3 items for the Homework subclass and demonstrate all the required program functions
-      //Create 3 items for the Quiz subclass and demonstate all the required program functions
-      //Note: Homework and Quiz subclass, Coursework superclass 
-      
+      //quizlist.print();
+            
       }
 }      
       
