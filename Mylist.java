@@ -1,5 +1,3 @@
-//Original code for Linked List Structure Assignment - provided by professor
-
 import java.util.NoSuchElementException;
 
 public class Mylist < T > {
@@ -45,29 +43,29 @@ public class Mylist < T > {
       }
    }
    
-   //remove node from head - we want to change the pointer from the head to the 2nd node
+   //remove node from head 
    public void removeFromHead() {
       ListNode < T > current = firstNode;
       firstNode = current.nextNode;
    }
    
-   //remove node from tail - tail is called lastNode
+   //remove node from tail 
    public void removeFromTail() {
       //change pointer to point at 2nd to last node
       ListNode <T> current = firstNode;
-      try { //new
+      try { 
          while (current.nextNode.nextNode != null) {
             current = current.nextNode;
          }
       lastNode = current; //change pointer to 2nd to last
-      current.nextNode = null; //remove last value (done by orphaning the node) 
+      current.nextNode = null; //remove last value 
       }
-      catch (java.lang.NullPointerException ex) { //new
-         System.out.println("Error - List is empty"); //new
-      } //new
+      catch (java.lang.NullPointerException ex) { 
+         System.out.println("Error - List is empty"); 
+      } 
    }
    
-   // 5) search for an item by index number (the number of its position in the list) and display the information for that library item.  
+   //search for an item by index number (the number of its position in the list) and display the information for that library item.  
    //The code must validate that the index number is within bounds and throw an appropriate exception if not. 
    public Object searchByIndex(int index) {
    
@@ -76,11 +74,9 @@ public class Mylist < T > {
          for (int i = 1; i <= index; i += 1) {
             current = current.nextNode;
          }
-         //System.out.println("Index " + index + " = " + current.data);
          return current.data; 
       }
       catch (java.lang.NullPointerException ex) {
-         //System.out.println("The index number is not within bounds.");
          return null; 
       }
    }

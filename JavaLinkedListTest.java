@@ -1,15 +1,16 @@
+//Kailan Stewart - Linked List Programming Assignment 
 //Main file that's executed 
 
 public class JavaLinkedListTest {
    public static void main(String[] args) {
    
-      Mylist<Object> hwlist = new Mylist<>("Homework List"); //Instantiate an instance of Mylist. Mylist = class, list = object aka instance of the class
-      System.out.println(hwlist.size()); //Printing out the size of list, and list is an object. Here we are using the size method 
+      Mylist<Object> hwlist = new Mylist<>("Homework List"); 
+      System.out.println("The size of the homework list before adding items is " + hwlist.size()); //Printing out the size of list, and list is an object. Here we are using the size method 
       
-      Mylist<Object> quizlist = new Mylist<>("Quiz List"); //Instantiate an instance of Mylist. Mylist = class, list = object aka instance of the class
-      System.out.println(quizlist.size()); //Printing out the size of list, and list is an object. Here we are using the size method 
+      Mylist<Object> quizlist = new Mylist<>("Quiz List"); 
+      System.out.println("The size of the quiz list before adding items is " + quizlist.size()); //Printing out the size of list, and list is an object. Here we are using the size method 
       
-      //NEED TO USE THE METHOD TO ADD A NODE TO THE HEAD - insertAtFront METHOD. Requirements 1 and 2
+      //Insert item at front and back of homework list
       hwlist.insertAtFront(new Homework(5, "1-10"));
       hwlist.insertAtFront(new Homework(20, "2-8"));
       hwlist.insertAtFront(new Homework(35, "1-15"));
@@ -17,7 +18,7 @@ public class JavaLinkedListTest {
       hwlist.insertAtBack(new Homework(62, "4-16"));
       hwlist.insertAtBack(new Homework(78, "1-12"));
       
-      //Add a node to the head - requirements 1,2
+      //Insert item at front and back of quiz list
       quizlist.insertAtFront(new Quiz(11, "1900s"));
       quizlist.insertAtFront(new Quiz(12, "1910s"));
       quizlist.insertAtFront(new Quiz(13, "1920s"));
@@ -25,49 +26,51 @@ public class JavaLinkedListTest {
       quizlist.insertAtBack(new Quiz(15, "1940s"));
       quizlist.insertAtBack(new Quiz(16, "1950s"));
       
-      /*Requirement 6 - print all items in the library 
-      (you may use the print method provided if you 
-      appropriately override the toString to ensure 
-      nice formatting and labels) including attribute 
-      labels (print out both lists) and the total 
-      number of items (either for each list or combined
-      is acceptable). Note: you must override the ToString 
-      in each subclass in order for this print method to 
-      display the contents as a string
-      */
       System.out.println("The number of items in the homework list is " + hwlist.size());
+      System.out.println("The entire homework list contains: ");
+      hwlist.print();
+      System.out.println("The number of items in the quiz list is " + quizlist.size());
+      System.out.println("The entire quiz list contains: ");
+      quizlist.print();
             
-      //CALL THE METHOD TO REMOVE THE TAIL NODE - Requirement 3
+      //CALL THE METHOD TO REMOVE THE TAIL NODE ON THE HOMEWORK LIST
       System.out.println("Before removing the item from the end, the homework list looks like: " );
       hwlist.print();
+      System.out.println("and there are " + hwlist.size() + " items.");
       hwlist.removeFromTail();
       System.out.println("After removing the item from the end, the homework list looks like: ");
       hwlist.print(); //print the homework list
+      System.out.println("and there are " + hwlist.size() + " items.");
       
-      //CALL THE METHOD TO REMOVE THE HEAD NODE - Requirement 4
+      //CALL THE METHOD TO REMOVE THE HEAD NODE ON THE HOMEWORK LIST
       System.out.println("Before removing the item from the front, the homework list looks like: ");
       hwlist.print();
+      System.out.println("and there are " + hwlist.size() + " items.");
       hwlist.removeFromHead();
       System.out.println("After removing the item from the front, the homework list looks like: ");
       hwlist.print(); //print the homework list
+      System.out.println("and there are " + hwlist.size() + " items.");
       
-      //Requirement 5 
       System.out.println("At index 1 of the homework list, the page number is " + ((Homework)hwlist.searchByIndex(1)).getPage() + " and the questions are " + ((Homework)hwlist.searchByIndex(1)).getQuestions());    
       System.out.println("At index 1 of the quiz list, the chapter is " + ((Quiz)quizlist.searchByIndex(1)).getChapter() + " and the subject is " + ((Quiz)quizlist.searchByIndex(1)).getSubject());                   
                 
-      //CALL THE METHOD TO REMOVE THE TAIL NODE - Requirement 3
+      //CALL THE METHOD TO REMOVE THE TAIL NODE ON THE QUIZ LIST
       System.out.println("Before removing the item from the end, the quiz list looks like: ");
       quizlist.print();
+      System.out.println("and there are " + quizlist.size() + " items.");
       quizlist.removeFromTail();
       System.out.println("After removing the item from the end, the quiz list looks like: ");
       quizlist.print(); //print the quiz list
+      System.out.println("and there are " + quizlist.size() + " items.");
       
-      //CALL THE METHOD TO REMOVE THE HEAD NODE - Requirement 4
+      //CALL THE METHOD TO REMOVE THE HEAD NODE ON THE QUIZ LIST
       System.out.println("Before removing the item from the front, the quiz list looks like: ");
       quizlist.print();
+      System.out.println("and there are " + quizlist.size() + " items.");
       quizlist.removeFromHead();
       System.out.println("After removing the item from the front, the quiz list looks like: ");
       quizlist.print();
+      System.out.println("and there are " + quizlist.size() + " items.");
                 
       }
 }      
