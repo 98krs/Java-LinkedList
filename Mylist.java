@@ -55,11 +55,16 @@ public class Mylist < T > {
    public void removeFromTail() {
       //change pointer to point at 2nd to last node
       ListNode <T> current = firstNode;
-      while (current.nextNode.nextNode != null) {
-         current = current.nextNode;
-      }
+      try { //new
+         while (current.nextNode.nextNode != null) {
+            current = current.nextNode;
+         }
       lastNode = current; //change pointer to 2nd to last
       current.nextNode = null; //remove last value (done by orphaning the node) 
+      }
+      catch (java.lang.NullPointerException ex) { //new
+         System.out.println("Error - List is empty"); //new
+      } //new
    }
    
    // 5) search for an item by index number (the number of its position in the list) and display the information for that library item.  

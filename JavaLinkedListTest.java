@@ -25,51 +25,6 @@ public class JavaLinkedListTest {
       quizlist.insertAtBack(new Quiz(15, "1940s"));
       quizlist.insertAtBack(new Quiz(16, "1950s"));
       
-      //CALL THE METHOD TO REMOVE THE TAIL NODE - Requirement 3
-      System.out.print("Before removing the item from the end, the homework list looks like: ");
-      hwlist.print();
-      hwlist.removeFromTail();
-      System.out.print("After removing the item from the end, the homework list looks like: ");
-      hwlist.print(); //print the homework list
-      
-      //CALL THE METHOD TO REMOVE THE HEAD NODE - Requirement 4
-      System.out.print("Before removing the item from the front, the homework list looks like: ");
-      hwlist.print();
-      hwlist.removeFromHead();
-      System.out.print("After removing the item from the front, the homework list looks like: ");
-      hwlist.print(); //print the homework list
-      
-      //Requirement 5 
-      System.out.println(((Homework)hwlist.searchByIndex(1)).getPage()); //prints out page number but not questions
-      System.out.println(((Homework)hwlist.searchByIndex(2)).getPage()); //prints out page number but not questions
-      System.out.println(((Homework)hwlist.searchByIndex(3)).getPage()); //prints out page number but not questions
-      //hwlist.searchByIndex(3); pretty sure this code is now wrong
-      //hwlist.searchByIndex(10); pretty sure this code is now wrong 
-      
-      //start of quiz--------------------------------------------------------------------------------- 
-           
-      //CALL THE METHOD TO REMOVE THE TAIL NODE - Requirement 3
-      System.out.print("Before removing the item from the end, the quiz list looks like: ");
-      quizlist.print();
-      quizlist.removeFromTail();
-      System.out.print("After removing the item from the end, the quiz list looks like: ");
-      quizlist.print(); //print the quiz list
-      
-      //CALL THE METHOD TO REMOVE THE HEAD NODE - Requirement 4
-      System.out.print("Before removing the item from the front, the quiz list looks like: ");
-      quizlist.print();
-      quizlist.removeFromHead();
-      System.out.print("After removing the item from the front, the quiz list looks like: ");
-      quizlist.print();
-      
-      //Requirement 5       
-      System.out.println(((Quiz)quizlist.searchByIndex(1)).getChapter()); 
-      System.out.println(((Quiz)quizlist.searchByIndex(2)).getChapter()); 
-      System.out.println(((Quiz)quizlist.searchByIndex(3)).getChapter()); 
-      //quizlist.searchByIndex(1); pretty sure this code is now wrong 
-      //quizlist.searchByIndex(3); //pretty sture this code is now wrong
-      //quizlist.searchByIndex(10);  pretty sure this code is now wrong
-
       /*Requirement 6 - print all items in the library 
       (you may use the print method provided if you 
       appropriately override the toString to ensure 
@@ -80,9 +35,40 @@ public class JavaLinkedListTest {
       in each subclass in order for this print method to 
       display the contents as a string
       */
-      //Work on this 
-      //quizlist.print();
+      System.out.println("The number of items in the homework list is " + hwlist.size());
             
+      //CALL THE METHOD TO REMOVE THE TAIL NODE - Requirement 3
+      System.out.println("Before removing the item from the end, the homework list looks like: " );
+      hwlist.print();
+      hwlist.removeFromTail();
+      System.out.println("After removing the item from the end, the homework list looks like: ");
+      hwlist.print(); //print the homework list
+      
+      //CALL THE METHOD TO REMOVE THE HEAD NODE - Requirement 4
+      System.out.println("Before removing the item from the front, the homework list looks like: ");
+      hwlist.print();
+      hwlist.removeFromHead();
+      System.out.println("After removing the item from the front, the homework list looks like: ");
+      hwlist.print(); //print the homework list
+      
+      //Requirement 5 
+      System.out.println("At index 1 of the homework list, the page number is " + ((Homework)hwlist.searchByIndex(1)).getPage() + " and the questions are " + ((Homework)hwlist.searchByIndex(1)).getQuestions());    
+      System.out.println("At index 1 of the quiz list, the chapter is " + ((Quiz)quizlist.searchByIndex(1)).getChapter() + " and the subject is " + ((Quiz)quizlist.searchByIndex(1)).getSubject());                   
+                
+      //CALL THE METHOD TO REMOVE THE TAIL NODE - Requirement 3
+      System.out.println("Before removing the item from the end, the quiz list looks like: ");
+      quizlist.print();
+      quizlist.removeFromTail();
+      System.out.println("After removing the item from the end, the quiz list looks like: ");
+      quizlist.print(); //print the quiz list
+      
+      //CALL THE METHOD TO REMOVE THE HEAD NODE - Requirement 4
+      System.out.println("Before removing the item from the front, the quiz list looks like: ");
+      quizlist.print();
+      quizlist.removeFromHead();
+      System.out.println("After removing the item from the front, the quiz list looks like: ");
+      quizlist.print();
+                
       }
 }      
       
